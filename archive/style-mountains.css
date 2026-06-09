@@ -1,0 +1,343 @@
+body {
+    /* Set the background for the entire page */
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+				url('../Images/Stara-Planina/Stara-Planina.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background still while you scroll */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Body takes at least the full viewport height */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+html {
+	scroll-behavior: smooth;
+
+}
+
+.header {
+	width: 100%;
+	height: 100px;
+	background-color: rgb(192, 200, 206);
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	padding: 5px 50px;
+}
+
+.logo {
+	position: absolute;
+	top: 45%;
+	left: 8%;
+	transform: translate(-50%, -50%);
+}
+
+
+.menu {
+	position: absolute;
+	top: 40px;
+	right: 16px;
+}
+
+.logo-img {
+	height: 80px; /* Scaled down */
+    width: auto;
+    margin-top: 10px;
+	display: block;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+
+}
+
+.logo-img:hover {
+	opacity: 0.6;
+}
+
+nav.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+nav.menu li {
+	margin-left: 30px;
+}
+
+nav.menu a {
+	color: rgb(7, 0, 0);
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+nav.menu a:hover {
+	color: #ffcc00;
+}
+
+.mountains-of-serbia {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 150px 0 50px 0;
+}
+.mountains-of-serbia h1 {
+	text-align: center;
+	font-size: 48px;
+	color: #1b1a1a;
+	margin-top: 50px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-decoration: underline;
+	text-shadow: #111 1px 1px 3px;
+}
+
+.mountains-of-serbia p {
+	max-width: 1200px;
+	text-align: center;
+	font-size: 24px;
+	color: #0c0c0c;
+	margin-top: 20px;
+	line-height: 1.6;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.slider {
+	overflow: hidden;
+	width: 1000px;	
+	margin: 30px auto 50px auto;
+	border-radius: 15px;
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.8);
+
+}
+
+.slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	animation: 20s slider infinite;
+}
+
+.slider figure img {
+	width: 20%;
+	height: 500px;
+	float: left;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+
+.mountain-list {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 50px;
+	
+}
+.article-mountains {
+	display: flex;
+	border-radius: 8px;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+
+.img-container img{
+	position: relative;
+	width: 400px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 8px;     /* Modern rounded corners */
+	box-shadow: #000000 1px 1px 10px;
+	margin-top: 30px;
+}
+
+.text-container {
+	max-width: 1000px;
+	margin-left: 50px;
+	margin-top: 15px;
+}
+.text-container h2 {
+	font-size: 36px;
+	color: #1b1a1a;
+	margin-bottom: 15px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-shadow: #111 1px 1px 3px;
+}
+
+.text-container p {
+	font-size: 24px;
+	color: #0c0c0c;
+	line-height: 1.5;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.read-more {
+   background-color: #007BFF; 
+   color: white; 
+   border: none; 
+   padding: 10px; 
+   cursor:pointer;
+   text-decoration: none;
+   display: inline-block;
+}
+.read-more:hover {
+   background-color: #0259b7;
+   text-decoration: underline;
+}
+
+
+
+.footer {
+	background-color: rgb(192, 200, 206);
+	padding: 30px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.footer-left, .footer-contact, .footer-right {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+.footer-right {
+	align-items: center;
+	text-align: center;
+}
+.footer-contact {
+	max-width: 400px;
+}
+
+.footer-logo img {
+	width: 200px;
+	height: 80px;
+	display: block;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+	padding: 20px 0;
+	margin: 50px 0 0 0;
+
+}
+
+.footer p {
+	margin-top: 60px;
+	font-size: 16px;
+	color: #333;
+}
+
+.footer-contact h5 {
+	margin: 0 0 15px 0;
+	font-size: 24px;
+	color: #000000;
+}
+
+.footer-right h5 {
+	text-align: left;
+	font-size: 36px;
+	color: #000000;
+	margin: 40px 0 20px 180px;
+	
+
+}
+
+.social-links {
+	display: flex;	
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	margin: 0 0 0 180px;
+	
+}
+
+.social-links a {
+	color: #111;
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	transition: color 0.3s ease;
+	
+}
+
+.social-links a:hover {
+	color: #0d7a85;
+
+}
+
+.social-links i {
+	font-size: 20px;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+	padding: 10px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	font-family: inherit;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form button {
+	padding: 10px 20px;
+	background-color: rgb(16, 140, 151);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+	background-color: #0d7a85;
+}
